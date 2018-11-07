@@ -15,6 +15,12 @@ public class FighterList {
 		return fighters;
 	}
 
+	public void getListOfFighters() {
+		for (Fighter fighter : fighters) {
+			System.out.println("[Fighter] \n" + "Fighter ID = " + fighter.getFighterId() + "\n" + "Fighter Name = " + fighter.getFighterName() + "\n" + "Win Percentage = " + fighter.getWinPercentage() + "\n");
+		}
+	}
+
 }
 
 

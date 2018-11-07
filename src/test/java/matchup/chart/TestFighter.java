@@ -19,4 +19,10 @@ class TestFighter {
 		assertThat(kingDedede.getWinPercentage()).isEqualTo(51.90);
 	}
 	
+	@Test
+	void testPrintFighterInfo() {
+		Fighter kingKRool = new Fighter(2, "King K.Rool", 52.50);
+		kingKRool.getFighterInfo();
+	}
+	
 }

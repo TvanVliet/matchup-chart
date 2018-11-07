@@ -24,8 +24,21 @@ public class Fighter {
 		this.winPercentage = winPercentage;
 	}
 	
+	public int getFighterId() {
+		return fighterId;
+	}
+	
+	public String getFighterName() {
+		return fighterName;
+	}
+	
 	public double getWinPercentage() {
 		return winPercentage;
+	}
+	
+	public String getFighterInfo() {
+		System.out.println("[Fighter] \n" + "Fighter ID =" + getFighterId() + "\n" + "Fighter Name = " + getFighterName() + "\n" + "Win Percentage = " + getWinPercentage());
+		return "[Fighter] \n" + "Fighter ID = " + getFighterId() + "\n" + "Fighter Name = " + getFighterName() + "\n" + "Win Percentage = " + getWinPercentage();
 	}
 	
 }
