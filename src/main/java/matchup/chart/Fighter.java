@@ -4,18 +4,28 @@ public class Fighter {
 	
 	private int fighterId;
 	private String fighterName;
+	private double winPercentage;
 	
-	public Fighter(int id, String fighterName) {
-		this.fighterId = id;
-		this.fighterName = fighterName;
+	Fighter(int id, String fighterName, double winPercentage) {
+		setId(id);
+		setFighterName(fighterName);
+		setWinPercentage(winPercentage);
 	}
 	
-	void setId(int fighterId) {
+	public void setId(int fighterId) {
 		this.fighterId = fighterId;
 	}
 	
-	void setFighterName(String fighterName) {
+	public void setFighterName(String fighterName) {
 		this.fighterName = fighterName;
+	}
+
+	public void setWinPercentage(double winPercentage) {
+		this.winPercentage = winPercentage;
+	}
+	
+	public double getWinPercentage() {
+		return winPercentage;
 	}
 	
 }
