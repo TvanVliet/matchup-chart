@@ -23,6 +23,7 @@ class TestFighter {
 	void testPrintFighterInfo() {
 		Fighter kingKRool = new Fighter(2, "King K.Rool", 52.50);
 		kingKRool.getFighterInfo();
+		assertThat(kingKRool.getFighterId()).isEqualTo(2);
 	}
 	
 }
