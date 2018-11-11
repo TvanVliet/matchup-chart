@@ -10,7 +10,6 @@ public class FighterCompare implements Comparator<Fighter> {
 		int fighter2Id = fighter2.getFighterId();
 		
 		return fighter1Id - fighter2Id;
-
 	}
 
 }
