@@ -27,14 +27,13 @@ class TestFighterList {
 	
 	@Test
 	void testPrintListOfFighters() {
-		Fighter kingDedede = new Fighter(6, "King Dedede", 58.90);
-		Fighter kingKRool = new Fighter(2, "King K.Rool", 52.50);
-		Fighter donkeyKong = new Fighter(3, "Donkey Kong", 55.50);
+		Fighter[] fightersToAdd = new Fighter[] {new Fighter(6, "King Dedede", 58.90), new Fighter(2, "King K.Rool", 52.50), new Fighter(3, "Donkey Kong", 55.50)};
+
 		FighterList fighterList = new FighterList();
-		fighterList.addFighterToList(kingDedede);
-		fighterList.addFighterToList(kingKRool);
-		fighterList.addFighterToList(donkeyKong);
-		fighterList.getListOfFighters();
+		
+		fighterList.addAllFightersToList(fightersToAdd);
+		
+		fighterList.printListOfFighters();
 	}
 	
 	@Test
@@ -51,6 +50,7 @@ class TestFighterList {
 		fighterList.addFighterToList(bowser);
 		
 		fighterList.sortFightersOnWinRate();
+		assertThat(fighterList.getFighters().get(0).getFighterName()).isEqualTo("Bowser");
 	}
 
 }

@@ -1,6 +1,7 @@
 package matchup.chart;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -13,11 +14,15 @@ public class FighterList {
 		fighters.add(fighter);
 	}
 	
+	public void addAllFightersToList(Fighter[] fightersToAdd) {
+		Collections.addAll(fighters, fightersToAdd);
+	}
+	
 	public List<Fighter> getFighters() {
 		return fighters;
 	}
 
-	public void getListOfFighters() {
+	public void printListOfFighters() {
 		for (Fighter fighter : fighters) {
 			System.out.println("[Fighter] \n" + "Fighter ID = " + fighter.getFighterId() + "\n" + "Fighter Name = " + fighter.getFighterName() + "\n" + "Win Percentage = " + fighter.getWinPercentage() + "\n");
 		}
